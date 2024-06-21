@@ -12,4 +12,6 @@ class AppColors {
   static const Color authText = Color(0xff7F8489);
 
   static const Color auth = Color(0xff356994);
+
+  static Color balck = const Color(0xff000000);
 }

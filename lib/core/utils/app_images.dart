@@ -3,6 +3,7 @@ class AppImages {
   static const onBoarding = "$path/on_borading.png";
   static const register = "$path/login.png";
   static const login = "$path/log.png";
+  static const home = "$path/home.png";
 
   //! Vectors
 
