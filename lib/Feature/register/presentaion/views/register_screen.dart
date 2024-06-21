@@ -82,7 +82,9 @@ class RegisterScreen extends StatelessWidget {
                       textColor: AppColors.wihte,
                       fontWeight: FontWeight.bold,
                       containerColor: AppColors.loginButton,
-                      onPressed: () {},
+                      onPressed: () {
+                        context.push(AppRouter.success);
+                      },
                     ),
                     SizedBox(
                       height: MediaQuery.sizeOf(context).height * 0.015,

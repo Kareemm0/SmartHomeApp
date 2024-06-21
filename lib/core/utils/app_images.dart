@@ -11,4 +11,5 @@ class AppImages {
   static const facebook = "$vectorsPath/facebook.svg";
   static const google = "$vectorsPath/google.svg";
   static const apple = "$vectorsPath/apple.svg";
+  static const success = "$vectorsPath/success.svg";
 }
