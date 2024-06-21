@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:smart_home/core/app_images.dart';
+import 'package:smart_home/core/utils/app_images.dart';
+
+import '../../../../core/widget/app_button.dart';
+import '../widgets/custom_animated_text.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -9,7 +12,24 @@ class OnBoardingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(AppImages.onBoarding),
+          SizedBox(
+            height: MediaQuery.sizeOf(context).height,
+            child: Image.asset(
+              AppImages.onBoarding,
+              fit: BoxFit.fill,
+            ),
+          ),
+          const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomAnimatedText(),
+              Spacer(),
+              Center(
+                child: CustomAppButton(),
+              ),
+              SizedBox(height: 50),
+            ],
+          ),
         ],
       ),
     );
