@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smart_home/core/utils/app_images.dart';
 
+import '../../../../core/utils/app_router.dart';
 import '../../../../core/widget/app_button.dart';
 import '../widgets/custom_animated_text.dart';
 
@@ -19,15 +21,19 @@ class OnBoardingScreen extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomAnimatedText(),
-              Spacer(),
+              const CustomAnimatedText(),
+              const Spacer(),
               Center(
-                child: CustomAppButton(),
+                child: CustomAppButton(
+                  onPressed: () {
+                    context.push(AppRouter.register);
+                  },
+                ),
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
             ],
           ),
         ],
