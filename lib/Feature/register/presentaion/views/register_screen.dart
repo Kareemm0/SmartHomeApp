@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smart_home/Feature/register/presentaion/widget/custom_svg.dart';
 import 'package:smart_home/core/utils/app_colors.dart';
 import 'package:smart_home/core/utils/app_images.dart';
+import 'package:smart_home/core/utils/app_router.dart';
 import 'package:smart_home/core/widget/app_button.dart';
 import 'package:smart_home/core/widget/custom_auth_text.dart';
 
@@ -28,7 +30,7 @@ class RegisterScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Image.asset(AppImages.login),
+                    Image.asset(AppImages.register),
                     SizedBox(
                       height: MediaQuery.sizeOf(context).height * 0.01,
                     ),
@@ -85,7 +87,10 @@ class RegisterScreen extends StatelessWidget {
                     SizedBox(
                       height: MediaQuery.sizeOf(context).height * 0.015,
                     ),
-                    const CustomAuthText(
+                    CustomAuthText(
+                        onPressed: () {
+                          context.push(AppRouter.login);
+                        },
                         textAccount: "Already have an account?",
                         textAuth: "Sign in"),
                     SizedBox(

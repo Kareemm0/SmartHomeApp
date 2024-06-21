@@ -5,8 +5,12 @@ import '../utils/app_colors.dart';
 class CustomAuthText extends StatelessWidget {
   final String textAccount;
   final String textAuth;
+  final void Function()? onPressed;
   const CustomAuthText(
-      {super.key, required this.textAccount, required this.textAuth});
+      {super.key,
+      required this.textAccount,
+      required this.textAuth,
+      this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +25,7 @@ class CustomAuthText extends StatelessWidget {
           ),
         ),
         TextButton(
-            onPressed: () {},
+            onPressed: onPressed,
             child: Text(
               textAuth,
               style: const TextStyle(

@@ -1,7 +1,8 @@
 class AppImages {
   static const String path = "assets/images";
   static const onBoarding = "$path/on_borading.png";
-  static const login = "$path/login.png";
+  static const register = "$path/login.png";
+  static const login = "$path/log.png";
 
   //! Vectors
 
