@@ -9,6 +9,8 @@ class CustomAppButton extends StatelessWidget {
   final Color? textColor;
   final double? fontSize;
   final FontWeight? fontWeight;
+  final double? width;
+  final BorderRadiusGeometry? borderRadius;
   const CustomAppButton(
       {super.key,
       this.containerColor,
@@ -16,15 +18,17 @@ class CustomAppButton extends StatelessWidget {
       this.text,
       this.textColor,
       this.fontSize,
-      this.fontWeight});
+      this.fontWeight,
+      this.width,
+      this.borderRadius});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.sizeOf(context).width * .4,
+      width: width ?? MediaQuery.sizeOf(context).width * .4,
       decoration: BoxDecoration(
         color: containerColor ?? AppColors.wihte,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: borderRadius ?? BorderRadius.circular(8),
       ),
       child: MaterialButton(
         onPressed: onPressed,
