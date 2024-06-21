@@ -1,6 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:smart_home/Feature/Success/success_screen.dart';
+import 'package:smart_home/Feature/home/presenation/views/home_screen.dart';
 import 'package:smart_home/Feature/login/presentaion/views/login_screen.dart';
+import 'package:smart_home/Feature/main/presenation/views/main_screen.dart';
 import 'package:smart_home/Feature/onboarding/presenation/views/on_boarding_screen.dart';
 import 'package:smart_home/Feature/register/presentaion/views/register_screen.dart';
 import 'package:smart_home/Feature/verification/verification_screen.dart';
@@ -11,6 +13,8 @@ class AppRouter {
   static const login = '/loginScreen';
   static const success = "/successScreen";
   static const verifiy = '/verificationScreen';
+  static const home = "/homeScreen";
+  static const main = "/mainScreen";
 
   static final router = GoRouter(
     routes: [
@@ -35,6 +39,14 @@ class AppRouter {
       GoRoute(
         path: verifiy,
         builder: (context, state) => const VerificationScreen(),
+      ),
+      GoRoute(
+        path: home,
+        builder: (context, state) => const HomeScreen(),
+      ),
+      GoRoute(
+        path: main,
+        builder: (context, state) => const MainScreen(),
       )
     ],
   );
