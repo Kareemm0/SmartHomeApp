@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.ktextColor,
+        appBarTheme: const AppBarTheme(color: AppColors.ktextColor),
         useMaterial3: true,
       ),
     );

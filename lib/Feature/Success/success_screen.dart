@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smart_home/core/utils/app_images.dart';
+import 'package:smart_home/core/utils/app_router.dart';
 
 import '../../core/utils/app_colors.dart';
 import '../../core/widget/app_button.dart';
@@ -44,7 +46,9 @@ class SuccessScreen extends StatelessWidget {
                 textColor: AppColors.wihte,
                 fontWeight: FontWeight.bold,
                 containerColor: AppColors.loginButton,
-                onPressed: () {},
+                onPressed: () {
+                  context.push(AppRouter.verifiy);
+                },
               ),
             ],
           ),
